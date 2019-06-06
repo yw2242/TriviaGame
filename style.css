@@ -7,19 +7,50 @@ body {
 h2 {
     text-align: center;
     margin: 40px auto;
-    font-size: 40px;
+    font-size: 45px;
     font-family: 'Caveat', cursive, Arial, Helvetica, sans-serif;
+    color: azure;
+}
+
+
+#start {
+    border: 2px solid;
+    border-color: white;
+    width: 100px;
+    height: 150px;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 35px;
+    font-family: 'Caveat', cursive, Arial, Helvetica, sans-serif;
+    color: white;
+    padding-right: 9px;
+    display: "";
+}
+
+#start:hover {
+    color: #fec16a;
+    border-color: #fec16a;
+    border: 3px solid;
 }
 
 
 #question-box {
     width: 60%;
     min-width: 300px;
+    min-height: 300px;
     margin: 50px auto;
     padding: 25px;
-    border-radius: 30px;
-    background: #0f4a66a1;
+    border-radius: 25px;
+    background: #132d39ab;
 }
+
+
+#timer {
+    float: right;
+}
+
 
 #question, #a, #b, #c, #d {
     color: white;
@@ -35,6 +66,17 @@ button {
 }
 
 
+p {
+    color: white;
+}
+
+
 #next {
     color: white;
+    display: none;
+}
+
+#score {
+    color: white;
+    display: none;
 }
