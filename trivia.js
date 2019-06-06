@@ -1,36 +1,52 @@
 $(document).ready(function() {
 
     // create question list (5 questions)
+
     var question = [
-        { q: "Death Valley is located in what U.S. state?",
-            a: "California",
-            b: "Utah",
-            c: "Colorado",
-            d: "Nevada"
+        { question: "Death Valley is located in what U.S. state?",
+            answer: {
+                a: "California",
+                b: "Utah",
+                c: "Colorado",
+                d: "Nevada"
+            },
+            correctAnswer: "a"
         },
-        { q: "What is the capital of Texas State?",
-            a: "Austin",
-            b: "Houston",
-            c: "Palo Alto",
-            d: "Dallas"
+        { question: "What is the capital of Texas State?",
+            answer: {
+                A: "Austin",
+                B: "Houston",
+                C: "Palo Alto",
+                D: "Dallas"
+            },
+            correctAnswer: "a"
         },
-        { q: "Which state is not sales tax free?",
-            a: "Alaska",
-            b: "Montana",
-            c: "South Dakota",
-            d: "New Hampshire"
+        { question: "Which state is not sales tax free?",
+            answer: {
+                a: "Alaska",
+                b: "Montana",
+                c: "South Dakota",
+                d: "New Hampshire"
+            },
+            correctAnswer: "c"
         },
-        { q: "Which state is not geographically connected to Nebreska State?",
-            a: "Wyoming",
-            b: "Iowa",
-            c: "Colorado",
-            d: "Missouri"
+        { question: "Which state is not geographically connected to Nebreska State?",
+            answer: {
+                a: "Wyoming",
+                b: "Iowa",
+                c: "Colorado",
+                d: "Missouri"
+            },
+            correctAnswer: "d"
         },
-        { q: "What is Idaho best known for?",
-            a: "Avocado",
-            b: "Marijuana",
-            c: "National Park",
-            d: "Potato"
+        { question: "What is Idaho best known for?",
+            answer: {
+                a: "Avocado",
+                b: "Marijuana",
+                c: "National Park",
+                d: "Potato"
+            },
+            correctAnswer: "d"
         }
 
 
@@ -47,8 +63,8 @@ $(document).ready(function() {
     var c = document.getElementById("c");
     var d = document.getElementById("d");
 
-    var lastQ = question.length - 1
-    var runningQuestion = 0;
+    var lastq = question.length - 1
+    var runningquestion = 0;
   
     
 
@@ -70,6 +86,7 @@ $(document).ready(function() {
         clearInterval(intervalId);
         intervalId = setInterval(decrement, 1000);
         $("#start").css("display", "none");
+        $("question").text(question);
       }
     
 
@@ -85,15 +102,15 @@ $(document).ready(function() {
 
 
     
-    function runQuestion() {
+    function runquestion() {
 
-        var q = question[runningQuestion];
+        var q = question[runningquestion];
 
-        question.innerHTML = "<p>"+ q.question +"</p>";
-        a.innerHTML = q.a;
-        b.innerHTML = q.b;
-        c.innerHTML = q.c;
-        d.innerHTML = q.d;
+        $("#question").innerHTML = "<p>"+ q.question +"</p>";
+        $("#a").innerHTML = q.a;
+        $("#b").innerHTML = q.b;
+        $("#c").innerHTML = q.c;
+        $("#d").innerHTML = q.d;
 
 }
     // for loop for the five questions

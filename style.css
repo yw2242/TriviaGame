@@ -57,6 +57,11 @@ h2 {
 }
 
 
+#a:hover, #b:hover, #c:hover, #d:hover {
+    color: #fec16a;
+}
+
+
 button {
     border-radius: 5px;
     border: 0px;
