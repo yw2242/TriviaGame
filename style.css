@@ -1,0 +1,22 @@
+body {
+    background: url(https://images.unsplash.com/photo-1534448177492-6d698f12a59a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80) no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+h2 {
+    text-align: center;
+    margin: 40px auto;
+    font-size: 40px;
+    font-family: 'Caveat', cursive, Arial, Helvetica, sans-serif;
+}
+
+
+#question-box {
+    width: 60%;
+    min-width: 300px;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 30px;
+    background: #0f4a66a1;
+}
