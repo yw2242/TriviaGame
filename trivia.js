@@ -107,8 +107,7 @@ $(document).ready(function() {
         }
  
     }
- 
- Message Input
+
 
 
     function stop() {
