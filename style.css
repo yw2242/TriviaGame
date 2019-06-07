@@ -62,6 +62,14 @@ h2 {
 }
 
 
+#a:target, #b:target, #c:target, #d:target {
+    background-color: #fec16a;
+    color: white;
+}
+
+
+
+
 button {
     border-radius: 5px;
     border: 0px;
