@@ -12,10 +12,10 @@ $(document).ready(function() {
         },
         { question: "What is the capital of Texas State?",
             answer: {
-                A: "1) Austin",
-                B: "2) Houston",
-                C: "3) Palo Alto",
-                D: "4) Dallas"
+                a: "1) Austin",
+                b: "2) Houston",
+                c: "3) Palo Alto",
+                d: "4) Dallas"
             },
             correctAnswer: "a"
         },
@@ -66,7 +66,7 @@ $(document).ready(function() {
     var intervalId;
     // once 'start' is clicked, time for 30 sec
     $("#start").on("click", run);
-    $("#next").on("click", run);
+    $("#next").on("click", next);
     // if clicked next before timeout, jump to the next question
     // if timeout, alert 'time's up' and jump to the next question
     function run() {
@@ -83,6 +83,35 @@ $(document).ready(function() {
 
         console.log(questionList[index])
       }
+
+      function next() {
+
+        clearInterval(intervalId);
+
+        index ++;
+
+        intervalId = setInterval(decrement, 1000);
+
+        $(number).css("color", "#fec16a");
+
+        $("#question").text(questionList[index].question);
+
+        $("#a").text(questionList[index].answer.a);
+
+        $("#b").text(questionList[index].answer.b);
+
+        $("#c").text(questionList[index].answer.c);
+
+        $("#d").text(questionList[index].answer.d);
+
+        $("#next").css("display", "block");
+
+
+
+        console.log(questionList[index])
+
+      }
+
     
       function decrement() {
 
