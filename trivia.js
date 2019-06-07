@@ -88,11 +88,23 @@ $(document).ready(function() {
 
         clearInterval(intervalId);
 
+        if (choice === questionList[index].correctAnswer) {
+
+        	score = score + 20;
+
+        }
+
+        $("#score").css("display", "block");
+
+        totalScore.textContent = score;
+
         index ++;
 
         intervalId = setInterval(decrement, 1000);
 
         $(number).css("color", "#fec16a");
+
+        $("#start").css("display", "none");
 
         $("#question").text(questionList[index].question);
 
@@ -106,11 +118,14 @@ $(document).ready(function() {
 
         $("#next").css("display", "block");
 
-
+        console.log(choice)
 
         console.log(questionList[index])
 
       }
+
+
+
 
     
       function decrement() {
@@ -139,8 +154,56 @@ $(document).ready(function() {
 
 
 
+    var choice = '';
+		
+
+        $("#a").on("click", clickA)
+
+        $("#b").on("click", clickB)
+
+        $("#c").on("click", clickC)
+
+        $("#d").on("click", clickD)
+
+        function clickA() {
+
+            choice = 'a';
+
+            console.log(choice)
+
+        }
+
+        function clickB() {
+
+            choice = 'b';
+
+            console.log(choice)
+
+        }
+
+        function clickC() {
+
+            choice = 'c';
+
+            console.log(choice)
+
+        }
+
+        function clickD() {
+
+            choice = 'd';
+
+            console.log(choice)
+
+        }
+
+
+
+
+
     function stop() {
         clearInterval(intervalId);
+        next();
     }
 
     

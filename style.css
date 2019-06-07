@@ -100,6 +100,14 @@ p {
 }
 
 #score {
-    color: white;
+    color: palevioletred;
     display: none;
+    border: 2px solid;
+    width: 40px;
+    height: 30px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: palevioletred;
+    text-align: center;
 }
