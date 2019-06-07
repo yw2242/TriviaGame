@@ -84,16 +84,31 @@ $(document).ready(function() {
         console.log(questionList[index])
       }
     
-    function decrement() {
+      function decrement() {
+
         number--;
+ 
         // number.style.color = "#fec16a";
+ 
         $("#remaining").text("Time remaining: " + number + " sec");
+ 
         console.log(number);
+ 
         if (number === 0) {
+ 
             stop();
+ 
             alert("Time's Up!");
+ 
+            index ++;
+ 
+            number = 30;
+ 
         }
+ 
     }
+ 
+ Message Input
 
 
     function stop() {
